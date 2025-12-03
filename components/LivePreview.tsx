@@ -38,11 +38,11 @@ const FormattedText: React.FC<{ text: string }> = ({ text }) => {
       // Blockquote (Scripture)
       if (trimmed.startsWith('>')) {
           elements.push(
-              <div key={i} className="relative group my-4">
+              <div key={i} className="relative group my-2">
                   <div className="absolute inset-0 bg-orange-500/10 blur-xl rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  <div className="relative flex gap-3 bg-gradient-to-r from-orange-50 to-transparent border-l-2 border-orange-400 p-4 rounded-r-xl">
-                    <BookOpenIcon className="w-5 h-5 text-orange-600 flex-shrink-0 mt-1" />
-                    <div className="text-orange-900 italic font-serif leading-relaxed text-base">
+                  <div className="relative flex gap-2 bg-gradient-to-r from-orange-50 to-transparent border-l-2 border-orange-400 p-3 rounded-r-lg">
+                    <BookOpenIcon className="w-4 h-4 text-orange-600 flex-shrink-0 mt-0.5" />
+                    <div className="text-orange-900 italic font-serif leading-relaxed text-xs">
                         {renderRichText(trimmed.replace(/^>\s?/, ''))}
                     </div>
                   </div>
@@ -55,9 +55,9 @@ const FormattedText: React.FC<{ text: string }> = ({ text }) => {
       if (trimmed.match(/^[\*\-]\s/) || trimmed.match(/^\d+\.\s/)) {
           const content = trimmed.replace(/^([\*\-]\s|\d+\.\s)/, '');
           elements.push(
-              <div key={i} className="flex gap-3 items-start my-2 bg-orange-50/50 p-3 rounded-lg border border-orange-200 hover:border-orange-300 transition-colors">
-                  <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0 shadow-[0_0_8px_rgba(249,115,22,0.6)]" />
-                  <span className="text-orange-900 leading-relaxed">{renderRichText(content)}</span>
+              <div key={i} className="flex gap-2 items-start my-1.5 bg-orange-50/50 p-2 rounded-lg border border-orange-200 hover:border-orange-300 transition-colors">
+                  <div className="w-1 h-1 rounded-full bg-orange-500 mt-1.5 flex-shrink-0 shadow-[0_0_6px_rgba(249,115,22,0.6)]" />
+                  <span className="text-orange-900 leading-relaxed text-xs">{renderRichText(content)}</span>
               </div>
           );
           return;
@@ -66,7 +66,7 @@ const FormattedText: React.FC<{ text: string }> = ({ text }) => {
       // Header
       if (trimmed.startsWith('#') || (trimmed.endsWith(':') && trimmed.length < 60)) {
           elements.push(
-              <h4 key={i} className="text-orange-900 font-semibold mt-5 mb-2 text-lg tracking-tight">
+              <h4 key={i} className="text-orange-900 font-semibold mt-3 mb-1.5 text-sm tracking-tight">
                   {renderRichText(trimmed.replace(/^#+\s?/, ''))}
               </h4>
           );
@@ -75,7 +75,7 @@ const FormattedText: React.FC<{ text: string }> = ({ text }) => {
 
       // Default Paragraph
       elements.push(
-          <p key={i} className="text-orange-800 leading-relaxed mb-2">
+          <p key={i} className="text-orange-800 leading-relaxed mb-1.5 text-xs">
               {renderRichText(trimmed)}
           </p>
       );
@@ -95,18 +95,18 @@ export const ChatDisplay: React.FC<ChatDisplayProps> = ({ messages, topic, isLoa
   }, [messages, isLoading]);
 
   return (
-    <div className="flex-1 overflow-y-auto no-scrollbar px-4 py-6" ref={scrollRef}>
-      <div className="max-w-3xl mx-auto space-y-6">
+    <div className="flex-1 overflow-y-auto no-scrollbar px-4 py-3" ref={scrollRef}>
+      <div className="max-w-3xl mx-auto space-y-3">
         
         {/* Welcome / Context Card - Bible Reminder Box */}
-        <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-orange-300 rounded-2xl p-8 mb-8 text-center shadow-lg">
-            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-5 shadow-md">
+        <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-orange-300 rounded-xl p-5 mb-4 text-center shadow-lg">
+            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
                 <SparklesIcon className="w-8 h-8 text-orange-600" />
             </div>
-            <h3 className="text-2xl font-serif font-bold text-orange-950 mb-3">{t(`topic.${topic.id}`)}</h3>
-            <p className="text-orange-900 text-base leading-relaxed mb-6 font-medium">{t(`desc.${topic.id}`)}</p>
-            <div className="inline-block px-6 py-3 bg-white rounded-xl border-2 border-orange-300 shadow-sm">
-                <p className="text-sm text-orange-800 font-semibold italic">📖 "{t(`verses.${topic.id}`)}"</p>
+            <h3 className="text-lg font-serif font-bold text-orange-950 mb-2">{t(`topic.${topic.id}`)}</h3>
+            <p className="text-orange-900 text-sm leading-relaxed mb-4 font-medium">{t(`desc.${topic.id}`)}</p>
+            <div className="inline-block px-4 py-2 bg-white rounded-lg border-2 border-orange-300 shadow-sm">
+                <p className="text-xs text-orange-800 font-semibold italic">📖 "{t(`verses.${topic.id}`)}"</p>
             </div>
         </div>
 
@@ -114,21 +114,21 @@ export const ChatDisplay: React.FC<ChatDisplayProps> = ({ messages, topic, isLoa
         {messages.map((msg, idx) => (
           <div
             key={idx}
-            className={`flex gap-4 ${msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}
+            className={`flex gap-3 ${msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}
           >
             {/* Avatar */}
-            <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${msg.role === 'user' ? 'bg-orange-200' : 'bg-orange-100'}`}>
+            <div className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center ${msg.role === 'user' ? 'bg-orange-200' : 'bg-orange-100'}`}>
                 {msg.role === 'user' ? (
-                    <UserCircleIcon className="w-5 h-5 text-orange-700" />
+                    <UserCircleIcon className="w-4 h-4 text-orange-700" />
                 ) : (
-                    <SparklesIcon className="w-4 h-4 text-orange-600" />
+                    <SparklesIcon className="w-3.5 h-3.5 text-orange-600" />
                 )}
             </div>
 
             {/* Bubble */}
             <div
                 className={`
-                    max-w-[90%] sm:max-w-[85%] px-5 py-4 rounded-2xl text-sm sm:text-base shadow-sm
+                    max-w-[90%] sm:max-w-[85%] px-4 py-3 rounded-2xl text-xs sm:text-sm shadow-sm
                     ${msg.role === 'user'
                         ? 'bg-orange-100 text-orange-900 rounded-tr-sm whitespace-pre-wrap leading-relaxed'
                         : 'bg-white/90 border border-orange-200 text-orange-900 rounded-tl-sm'

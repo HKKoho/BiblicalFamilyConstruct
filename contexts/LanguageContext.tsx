@@ -22,6 +22,7 @@ export const translations = {
     'hero.cta': 'Begin Building',
 
     // Topics - Family-focused
+    'topic.introduction': 'Introduction',
     'topic.insecurity': 'Marriage Foundation',
     'topic.loneliness': 'Communication',
     'topic.stress': 'Conflict Resolution',
@@ -34,6 +35,7 @@ export const translations = {
     'topic.sorrow': 'Life Transitions',
 
     // Topic Descriptions
+    'desc.introduction': 'Listen to the book introduction read aloud with Text-to-Speech.',
     'desc.insecurity': 'Establish your marriage on the solid foundation of God\'s design and covenant love.',
     'desc.loneliness': 'Learn biblical principles for healthy communication between husband and wife.',
     'desc.stress': 'Resolve conflicts with grace and wisdom, building unity in your family.',
@@ -46,6 +48,7 @@ export const translations = {
     'desc.sorrow': 'Handle life transitions and challenges with faith and resilience.',
 
     // Bible Verses
+    'verses.introduction': 'Book Introduction',
     'verses.insecurity': 'Genesis 2:24, Matthew 19:4-6',
     'verses.loneliness': 'Ephesians 4:29, James 1:19',
     'verses.stress': 'Proverbs 15:1, Ephesians 4:26-27',
@@ -77,14 +80,28 @@ export const translations = {
     'resources.audioTitle': 'Listen to Testimony',
     'resources.audioDesc': 'Hear real stories of transformed families through God\'s grace',
     'resources.audioNote': 'Inspirational testimony to encourage your family journey',
+
+    // Introduction Text
+    'intro.text': `家庭是社會的基本單位，俗人對"家"的觀念尤為重視。可惜，近年家庭都開始出現，離婚率節節上升，單親家庭愈來愈多如雨後春筍，再加上年輕國自虐憂愁，對於滿國園大壓力，在這時代浪潮的衝擊下，茶至姪妻就住也不再彼劫，這實在不能不壤我們想代大壓力。
+
+人拒由子或瓦的廊定，對娛婚有錯誤的觀點和不切實際的期望，適席了相設立極短暫度的典章，離婦我群的交代公經離要想變學，但真正懂得如何建立的人，仍是寥寥可數。
+
+一向以來，我們都受信：神是人生命的聯絡者，在這督曝沒有絕路，羞辱的需領和看照，我們於2010年5月出版了以"全人簡講為基礎"而編撰的《心靈團單學》，目的就是幫助更人情在在人生後俯不足用的的話語，並匡生命中西五色鷹的挑戰，並為主打美好的見證。特定夫社一高團單學，對於系信香決校《心靈團單學》見的此評他聰瑪家的見證，並他們已更靠要商，因出經以得敢，魔友出敢並不關照結婚重樣，他生命新，置金念服，過討評婚控的生活。
+
+威到夫大夫信用《心靈團單學》它給榆了整經研究，靈牒帝開設心靈團學（也括心靈輔導），讓更多人得著痛苦的幫，生命就變成長，為了更要切地服待弱兄妹，難則也其實夜運用《心靈團單學》，我們以做一系列是經資料，包括長老和資本，供個人研經、團契小組及主日學研讀，期望藉著文藏討論，查考經文、分享及彼此開編，有助提性旦我種毒，家成是不同國籍的困礎，你可僅得教敬，生命更星成熟。
+
+我們還棟《媽煮就其真一活出典緣愛》為《心靈團單學》首款系列的第二冊，因為家著有屬家的約墓，應讓國線愛人心究意，性生活不能滿足關系兩，不守群來希望我衝撃，重害的廢服值人家沒改變，每等她確為可見衝虞，問題不修試完成了，絕對成為當今一個觸為重要的課題。所以，更要更真實地教育基督徒怎樣在家庭生活所展觀到圓，駕助性住庄"家"的觀念和男女關連俸作正並明照的丁解，建立合會上這的家庭生活，在教師中帝酸到此代，為主教作美好的見證本和基本，內容均為十章至重要料，包括愛、婚前緊、婚姻、夫妻的挑戰、婚姻的性觀痛、家庭生活、家庭、不育及跟身十億礎超，從聖經教學，寫的人物的經歷及生那麼世提出生命傳修，講我們建立堅固家園的靈糧重整，重要婆女在婚姻階的中履行的身好衝麻爾，互相栽培，向夫妻才能更多參與家庭的基地，並予合會上這的基地，全章就討分娛養本和基本，內容均為十章至重要料，包括愛、婚前緊、婚姻、夫妻的挑戰、婚姻的。
+
+這壘觀察料雖以完成，除了感謝父神在各方面的供應和照顧大，我們聖感謝主權幸華全傳士的建議和支持，作者且敬信博士，德應海博士及向志俊博士順心編寫，蒙系明先生監督計劃，還有類似相對材料可工暈心建上，演劇的鼓音著者得堪無天的智慧和力量去廣為靈對客的宗教，並升片決色相基庫並經全的言會化家庭，享受得久傷意，溫嘉相和照暴素滿的婚姻生活。`,
   },
   'zh-TW': {
     // Hero Section
-    'hero.title': '聖經家庭建造',
+    'hero.title': '聖經建造家庭',
     'hero.subtitle': '透過聖經智慧和指引建立合神心意的家庭',
     'hero.cta': '開始建造',
 
     // Topics - Family-focused
+    'topic.introduction': '導論',
     'topic.insecurity': '婚姻根基',
     'topic.loneliness': '溝通之道',
     'topic.stress': '衝突解決',
@@ -97,6 +114,7 @@ export const translations = {
     'topic.sorrow': '人生轉變',
 
     // Topic Descriptions
+    'desc.introduction': '聆聽書籍導論的語音朗讀。',
     'desc.insecurity': '在神的設計和盟約之愛上建立婚姻的堅固根基。',
     'desc.loneliness': '學習夫妻之間健康溝通的聖經原則。',
     'desc.stress': '以恩典和智慧解決衝突，在家庭中建立合一。',
@@ -109,6 +127,7 @@ export const translations = {
     'desc.sorrow': '以信心和韌性應對人生的轉變和挑戰。',
 
     // Bible Verses
+    'verses.introduction': '書籍導論',
     'verses.insecurity': '創世記 2:24，馬太福音 19:4-6',
     'verses.loneliness': '以弗所書 4:29，雅各書 1:19',
     'verses.stress': '箴言 15:1，以弗所書 4:26-27',
@@ -124,7 +143,7 @@ export const translations = {
     'ui.back': '返回',
     'ui.sessionTitle': '家庭建造時光',
     'ui.startSession': '開始對話',
-    'ui.footer': '聖經家庭建造應用程式',
+    'ui.footer': '聖經建造家庭應用程式',
     'ui.placeholder': '分享您的家庭問題...',
     'ui.send': '發送',
     'ui.loading': '思考中...',
@@ -140,6 +159,19 @@ export const translations = {
     'resources.audioTitle': '聆聽見證',
     'resources.audioDesc': '聽真實的家庭透過神的恩典轉化的故事',
     'resources.audioNote': '激勵人心的見證，鼓勵您的家庭旅程',
+
+    // Introduction Text (same as English, in Traditional Chinese)
+    'intro.text': `家庭是社會的基本單位，俗人對"家"的觀念尤為重視。可惜，近年家庭都開始出現，離婚率節節上升，單親家庭愈來愈多如雨後春筍，再加上年輕國自虐憂愁，對於滿國園大壓力，在這時代浪潮的衝擊下，茶至姪妻就住也不再彼劫，這實在不能不壤我們想代大壓力。
+
+人拒由子或瓦的廊定，對娛婚有錯誤的觀點和不切實際的期望，適席了相設立極短暫度的典章，離婦我群的交代公經離要想變學，但真正懂得如何建立的人，仍是寥寥可數。
+
+一向以來，我們都受信：神是人生命的聯絡者，在這督曝沒有絕路，羞辱的需領和看照，我們於2010年5月出版了以"全人簡講為基礎"而編撰的《心靈團單學》，目的就是幫助更人情在在人生後俯不足用的的話語，並匡生命中西五色鷹的挑戰，並為主打美好的見證。特定夫社一高團單學，對於系信香決校《心靈團單學》見的此評他聰瑪家的見證，並他們已更靠要商，因出經以得敢，魔友出敢並不關照結婚重樣，他生命新，置金念服，過討評婚控的生活。
+
+威到夫大夫信用《心靈團單學》它給榆了整經研究，靈牒帝開設心靈團學（也括心靈輔導），讓更多人得著痛苦的幫，生命就變成長，為了更要切地服待弱兄妹，難則也其實夜運用《心靈團單學》，我們以做一系列是經資料，包括長老和資本，供個人研經、團契小組及主日學研讀，期望藉著文藏討論，查考經文、分享及彼此開編，有助提性旦我種毒，家成是不同國籍的困礎，你可僅得教敬，生命更星成熟。
+
+我們還棟《媽煮就其真一活出典緣愛》為《心靈團單學》首款系列的第二冊，因為家著有屬家的約墓，應讓國線愛人心究意，性生活不能滿足關系兩，不守群來希望我衝撃，重害的廢服值人家沒改變，每等她確為可見衝虞，問題不修試完成了，絕對成為當今一個觸為重要的課題。所以，更要更真實地教育基督徒怎樣在家庭生活所展觀到圓，駕助性住庄"家"的觀念和男女關連俸作正並明照的丁解，建立合會上這的家庭生活，在教師中帝酸到此代，為主教作美好的見證本和基本，內容均為十章至重要料，包括愛、婚前緊、婚姻、夫妻的挑戰、婚姻的性觀痛、家庭生活、家庭、不育及跟身十億礎超，從聖經教學，寫的人物的經歷及生那麼世提出生命傳修，講我們建立堅固家園的靈糧重整，重要婆女在婚姻階的中履行的身好衝麻爾，互相栽培，向夫妻才能更多參與家庭的基地，並予合會上這的基地，全章就討分娛養本和基本，內容均為十章至重要料，包括愛、婚前緊、婚姻、夫妻的挑戰、婚姻的。
+
+這壘觀察料雖以完成，除了感謝父神在各方面的供應和照顧大，我們聖感謝主權幸華全傳士的建議和支持，作者且敬信博士，德應海博士及向志俊博士順心編寫，蒙系明先生監督計劃，還有類似相對材料可工暈心建上，演劇的鼓音著者得堪無天的智慧和力量去廣為靈對客的宗教，並升片決色相基庫並經全的言會化家庭，享受得久傷意，溫嘉相和照暴素滿的婚姻生活。`,
   }
 };
 
