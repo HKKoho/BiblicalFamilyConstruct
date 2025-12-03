@@ -48,7 +48,7 @@ export const InputArea: React.FC<InputAreaProps> = ({ onSendMessage, isLoading, 
     <div className="w-full mx-auto">
       <form
         onSubmit={handleSubmit}
-        className="relative flex items-end gap-3 bg-white backdrop-blur-md border-2 border-orange-400 focus-within:border-orange-600 focus-within:shadow-xl rounded-2xl p-3 shadow-lg transition-all duration-300"
+        className="relative flex items-end gap-2 sm:gap-3 bg-white backdrop-blur-md border-2 border-orange-400 focus-within:border-orange-600 focus-within:shadow-xl rounded-xl sm:rounded-2xl p-2 sm:p-3 shadow-lg transition-all duration-300"
       >
         <textarea
           ref={textareaRef}
@@ -58,7 +58,7 @@ export const InputArea: React.FC<InputAreaProps> = ({ onSendMessage, isLoading, 
           placeholder={placeholder || t('input.placeholder')}
           disabled={isLoading}
           rows={1}
-          className="w-full bg-transparent text-orange-950 placeholder-orange-500 text-base sm:text-lg font-medium p-4 focus:outline-none resize-none max-h-[150px] overflow-y-auto scrollbar-hide"
+          className="w-full bg-transparent text-orange-950 placeholder-orange-500 text-sm sm:text-base font-medium p-2 sm:p-4 focus:outline-none resize-none max-h-[150px] overflow-y-auto scrollbar-hide"
         />
 
         <button
@@ -66,22 +66,22 @@ export const InputArea: React.FC<InputAreaProps> = ({ onSendMessage, isLoading, 
           onClick={() => handleSubmit()}
           disabled={!input.trim() || isLoading}
           className={`
-            p-4 rounded-xl flex-shrink-0 transition-all duration-200
+            p-3 sm:p-4 rounded-lg sm:rounded-xl flex-shrink-0 transition-all duration-200 min-h-[44px] min-w-[44px] flex items-center justify-center
             ${input.trim() && !isLoading
-              ? 'bg-orange-600 text-white hover:bg-orange-500 shadow-lg transform hover:scale-105'
+              ? 'bg-orange-600 text-white active:bg-orange-500 shadow-lg active:scale-95'
               : 'bg-orange-200 text-orange-400 cursor-not-allowed'
             }
           `}
         >
           {isLoading ? (
-            <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+            <div className="w-5 h-5 sm:w-6 sm:h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
           ) : (
-            <PaperAirplaneIcon className="w-6 h-6" />
+            <PaperAirplaneIcon className="w-5 h-5 sm:w-6 sm:h-6" />
           )}
         </button>
       </form>
-      <div className="text-center mt-3">
-         <p className="text-xs text-orange-700 font-medium">⚠️ AI can make mistakes. Please consult a professional for serious medical or mental health concerns.</p>
+      <div className="text-center mt-2 sm:mt-3 px-2">
+         <p className="text-[10px] sm:text-xs text-orange-700 font-medium">⚠️ AI can make mistakes. Please consult a professional for serious concerns.</p>
       </div>
     </div>
   );

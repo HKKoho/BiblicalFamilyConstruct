@@ -86,10 +86,11 @@ const App: React.FC = () => {
 
           <Hero />
 
-          <div className="max-w-6xl mx-auto px-4 pb-8">
-            {/* Pentagon Layout Container */}
-            <div className="relative min-h-[600px] flex items-center justify-center">
-              {/* Pentagon arrangement: Top (1), Row 2 (2), Row 3 (3), Row 4 (3), Bottom (2) */}
+          <div className="max-w-6xl mx-auto px-3 sm:px-4 pb-6 sm:pb-8">
+            {/* Mobile: Grid Layout, Desktop: Pentagon Layout */}
+            <div className="hidden md:block">
+              <div className="relative min-h-[600px] flex items-center justify-center">
+                {/* Pentagon arrangement: Top (1), Row 2 (2), Row 3 (3), Row 4 (3), Bottom (2) */}
 
               {/* Top Row - 1 card (Introduction) */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2">
@@ -230,10 +231,45 @@ const App: React.FC = () => {
                   </button>
                 ))}
               </div>
+              </div>
+            </div>
+
+            {/* Mobile Grid Layout */}
+            <div className="md:hidden grid grid-cols-2 gap-3 max-w-md mx-auto">
+              {TOPICS.map((topic) => (
+                <button
+                  key={topic.id}
+                  onClick={() => handleSelectTopic(topic)}
+                  className="group relative overflow-hidden bg-white/80 backdrop-blur-sm active:bg-white border border-orange-200 active:border-orange-400 rounded-xl p-3 text-left transition-all duration-200 active:scale-95 shadow-sm active:shadow-lg min-h-[120px] flex flex-col"
+                >
+                  <div className="absolute top-0 left-0 w-1 h-full bg-orange-400/0 group-active:bg-orange-500 transition-colors"></div>
+                  <div className="absolute top-2 right-2 text-orange-400 group-active:text-orange-600 transition-colors">
+                    {topic.id === 'introduction' ? (
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                      </svg>
+                    ) : (
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                      </svg>
+                    )}
+                  </div>
+                  <h3 className="text-sm font-serif font-semibold text-orange-900 mb-1 pr-6 group-active:text-orange-600">
+                    {t(`topic.${topic.id}`)}
+                  </h3>
+                  <p className="text-[10px] text-orange-700/70 group-active:text-orange-800 line-clamp-3 flex-1">
+                    {t(`desc.${topic.id}`)}
+                  </p>
+                  <div className="mt-2 flex items-center text-[10px] text-orange-500 group-active:text-orange-600 transition-colors">
+                    <span>{t('ui.startSession')}</span>
+                    <svg className="w-2.5 h-2.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                  </div>
+                </button>
+              ))}
             </div>
           </div>
 
-          <footer className="text-center py-4 text-orange-600 text-xs">
+          <footer className="text-center py-3 sm:py-4 text-orange-600 text-xs">
             <p>{t('ui.footer')} • {new Date().getFullYear()}</p>
           </footer>
         </div>
@@ -241,15 +277,15 @@ const App: React.FC = () => {
         /* CHAT VIEW OR INTRODUCTION VIEW */
         <div className="flex flex-col h-full z-10 animate-in fade-in duration-500">
           {/* Header */}
-          <div className="flex-shrink-0 bg-white/90 backdrop-blur-md border-b border-orange-200 px-4 py-2.5 flex items-center justify-between">
+          <div className="flex-shrink-0 bg-white/90 backdrop-blur-md border-b border-orange-200 px-3 sm:px-4 py-2 sm:py-2.5 flex items-center justify-between">
             <button
               onClick={handleBack}
-              className="flex items-center text-orange-700 hover:text-orange-900 transition-colors text-sm font-medium"
+              className="flex items-center text-orange-700 active:text-orange-900 transition-colors text-xs sm:text-sm font-medium min-h-[44px] -ml-2 pl-2 pr-3"
             >
-              <ChevronLeftIcon className="w-5 h-5 mr-1" />
-              {t('ui.back')}
+              <ChevronLeftIcon className="w-5 h-5 sm:w-5 sm:h-5 mr-0.5 sm:mr-1" />
+              <span className="hidden xs:inline">{t('ui.back')}</span>
             </button>
-            <span className="text-sm font-semibold text-orange-900 hidden sm:block">{t('ui.sessionTitle')}</span>
+            <span className="text-xs sm:text-sm font-semibold text-orange-900 hidden sm:block truncate max-w-[200px]">{t('ui.sessionTitle')}</span>
             <LanguageToggle />
           </div>
 

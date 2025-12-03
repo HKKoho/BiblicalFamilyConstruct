@@ -69,34 +69,35 @@ export const IntroductionView: React.FC = () => {
   };
 
   return (
-    <div className="flex-1 overflow-y-auto p-6">
+    <div className="flex-1 overflow-y-auto p-3 sm:p-6">
       <div className="max-w-4xl mx-auto">
-        <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg p-8 border border-orange-200">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-serif font-bold text-orange-900">
+        <div className="bg-white/90 backdrop-blur-sm rounded-lg sm:rounded-xl shadow-lg p-4 sm:p-8 border border-orange-200">
+          <div className="flex items-center justify-between mb-4 sm:mb-6">
+            <h2 className="text-lg sm:text-2xl font-serif font-bold text-orange-900">
               {t('topic.introduction')}
             </h2>
-            <SpeakerWaveIcon className="w-8 h-8 text-orange-500" />
+            <SpeakerWaveIcon className="w-6 h-6 sm:w-8 sm:h-8 text-orange-500" />
           </div>
 
           {/* Text-to-Speech Controls */}
-          <div className="flex gap-3 mb-6 justify-center">
+          <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6 justify-center">
             {!isPlaying && !isPaused && (
               <button
                 onClick={handlePlay}
-                className="flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition-colors font-medium"
+                className="flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-orange-500 active:bg-orange-600 text-white rounded-lg transition-colors font-medium text-sm sm:text-base min-h-[44px]"
               >
-                <PlayIcon className="w-5 h-5" />
-                Play Audio
+                <PlayIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="hidden xs:inline">Play Audio</span>
+                <span className="xs:hidden">Play</span>
               </button>
             )}
 
             {isPlaying && (
               <button
                 onClick={handlePause}
-                className="flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition-colors font-medium"
+                className="flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-orange-500 active:bg-orange-600 text-white rounded-lg transition-colors font-medium text-sm sm:text-base min-h-[44px]"
               >
-                <PauseIcon className="w-5 h-5" />
+                <PauseIcon className="w-4 h-4 sm:w-5 sm:h-5" />
                 Pause
               </button>
             )}
@@ -104,9 +105,9 @@ export const IntroductionView: React.FC = () => {
             {isPaused && (
               <button
                 onClick={handlePlay}
-                className="flex items-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg transition-colors font-medium"
+                className="flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-orange-500 active:bg-orange-600 text-white rounded-lg transition-colors font-medium text-sm sm:text-base min-h-[44px]"
               >
-                <PlayIcon className="w-5 h-5" />
+                <PlayIcon className="w-4 h-4 sm:w-5 sm:h-5" />
                 Resume
               </button>
             )}
@@ -114,9 +115,9 @@ export const IntroductionView: React.FC = () => {
             {(isPlaying || isPaused) && (
               <button
                 onClick={handleStop}
-                className="flex items-center gap-2 px-6 py-3 bg-gray-500 hover:bg-gray-600 text-white rounded-lg transition-colors font-medium"
+                className="flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-gray-500 active:bg-gray-600 text-white rounded-lg transition-colors font-medium text-sm sm:text-base min-h-[44px]"
               >
-                <StopIcon className="w-5 h-5" />
+                <StopIcon className="w-4 h-4 sm:w-5 sm:h-5" />
                 Stop
               </button>
             )}
@@ -124,7 +125,7 @@ export const IntroductionView: React.FC = () => {
 
           {/* Introduction Text */}
           <div className="prose prose-orange max-w-none">
-            <div className="text-sm leading-relaxed text-gray-800 whitespace-pre-wrap">
+            <div className="text-xs sm:text-sm leading-relaxed text-gray-800 whitespace-pre-wrap">
               {t('intro.text')}
             </div>
           </div>
