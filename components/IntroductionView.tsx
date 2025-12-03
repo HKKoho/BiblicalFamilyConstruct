@@ -14,7 +14,8 @@ export const IntroductionView: React.FC = () => {
 
   useEffect(() => {
     const synth = window.speechSynthesis;
-    const u = new SpeechSynthesisUtterance(t('intro.text'));
+    // Use summary for TTS instead of full text
+    const u = new SpeechSynthesisUtterance(t('intro.summary'));
 
     // Set Chinese voice if available
     u.lang = 'zh-TW';
