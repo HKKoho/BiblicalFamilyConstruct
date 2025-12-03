@@ -102,7 +102,7 @@ export const translations = {
     'hero.cta': '開始建造',
 
     // Topics - Family-focused
-    'topic.introduction': '導論',
+    'topic.introduction': '書籍導論',
     'topic.insecurity': '婚姻根基',
     'topic.loneliness': '溝通之道',
     'topic.stress': '衝突解決',
