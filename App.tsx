@@ -14,16 +14,16 @@ import { getBiblicalAdvice, ChatMessage, TopicContext } from './services/gemini'
 import { ChevronLeftIcon } from '@heroicons/react/24/outline';
 
 const TOPICS: TopicContext[] = [
-  { id: 'insecurity', title: 'Insecurity', description: 'Find your identity and worth in God, not in worldly standards.', verses: 'Psalm 139:14, Ephesians 2:10' },
-  { id: 'loneliness', title: 'Loneliness', description: 'Experience the presence of the Friend who sticks closer than a brother.', verses: 'Deuteronomy 31:6, Matthew 28:20' },
-  { id: 'stress', title: 'Stress', description: 'Find rest for your soul in His grace amidst the chaos of life.', verses: 'Matthew 11:28-30, Philippians 4:6-7' },
-  { id: 'anxiety', title: 'Anxiety', description: 'Cast your cares on Him, for He cares deeply for you.', verses: '1 Peter 5:7, Isaiah 41:10' },
-  { id: 'guilt', title: 'Guilt & Shame', description: 'Embrace the freedom that comes from His forgiveness.', verses: 'Romans 8:1, 1 John 1:9' },
-  { id: 'anger', title: 'Anger', description: 'Learn to be slow to speak and slow to become angry.', verses: 'James 1:19-20, Ephesians 4:26' },
-  { id: 'depression', title: 'Depression', description: 'The Lord is close to the brokenhearted and saves the crushed in spirit.', verses: 'Psalm 34:18, Psalm 42:11' },
-  { id: 'trauma', title: 'Trauma', description: 'He heals the brokenhearted and binds up their wounds.', verses: 'Psalm 147:3, Isaiah 61:1-3' },
-  { id: 'exhaustion', title: 'Exhaustion', description: 'Those who hope in the Lord will renew their strength.', verses: 'Isaiah 40:29-31, Galatians 6:9' },
-  { id: 'sorrow', title: 'Sorrow', description: 'Weeping may stay for the night, but rejoicing comes in the morning.', verses: 'Psalm 30:5, Revelation 21:4' },
+  { id: 'insecurity', title: 'Sacrificial Love', description: 'Living out true love through self-sacrifice in relationships.', verses: '1 Corinthians 13' },
+  { id: 'loneliness', title: 'Pre-Marriage', description: 'Understanding God\'s design for relationships before marriage.', verses: 'Genesis 1:27-28, 2:18-25' },
+  { id: 'stress', title: 'Covenant Love', description: 'Building marriage on God\'s unbreakable covenant of love.', verses: 'Song of Songs 3:1-11' },
+  { id: 'anxiety', title: 'Husband & Wife', description: 'Fulfilling biblical roles in the marriage relationship.', verses: 'Ephesians 5:22-33' },
+  { id: 'guilt', title: 'Marital Intimacy', description: 'Cultivating healthy physical intimacy in marriage.', verses: '1 Corinthians 7:1-9' },
+  { id: 'anger', title: 'Complementarity', description: 'Embracing how husbands and wives complement each other.', verses: '1 Peter 3:1-9' },
+  { id: 'depression', title: 'Family Harmony', description: 'Creating peace and unity within the family.', verses: 'Genesis 50:15-21' },
+  { id: 'trauma', title: 'Sexual Purity', description: 'Maintaining purity and faithfulness in marriage.', verses: 'Proverbs 5:1-14, Matthew 5:27-30' },
+  { id: 'exhaustion', title: 'Contentment', description: 'Finding satisfaction and joy in God\'s provision.', verses: '1 Samuel 1:1-11' },
+  { id: 'sorrow', title: 'Divine Calling', description: 'Understanding marriage and singleness as God\'s calling.', verses: 'Matthew 19:3-12, 1 Corinthians 7:25-35' },
 ];
 
 const App: React.FC = () => {
@@ -65,7 +65,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="h-[100dvh] flex flex-col bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 overflow-hidden relative">
+    <div className="h-[100dvh] flex flex-col overflow-hidden relative">
 
       {/* Background Ambience - Warm hopeful glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -98,6 +98,11 @@ const App: React.FC = () => {
                     className="group relative overflow-hidden bg-white/80 backdrop-blur-sm hover:bg-white border border-orange-200 hover:border-orange-400 rounded-xl p-4 text-left transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-200/50 w-52"
                   >
                     <div className="absolute top-0 left-0 w-1 h-full bg-orange-400/0 group-hover:bg-orange-500 transition-colors"></div>
+                    <div className="absolute top-3 right-3 text-orange-400 group-hover:text-orange-600 transition-colors">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                      </svg>
+                    </div>
                     <h3 className="text-base font-serif font-semibold text-orange-900 mb-1.5 group-hover:text-orange-600">
                       {t(`topic.${topic.id}`)}
                     </h3>
@@ -121,6 +126,11 @@ const App: React.FC = () => {
                     className="group relative overflow-hidden bg-white/80 backdrop-blur-sm hover:bg-white border border-orange-200 hover:border-orange-400 rounded-xl p-4 text-left transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-200/50 w-52"
                   >
                     <div className="absolute top-0 left-0 w-1 h-full bg-orange-400/0 group-hover:bg-orange-500 transition-colors"></div>
+                    <div className="absolute top-3 right-3 text-orange-400 group-hover:text-orange-600 transition-colors">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                      </svg>
+                    </div>
                     <h3 className="text-base font-serif font-semibold text-orange-900 mb-1.5 group-hover:text-orange-600">
                       {t(`topic.${topic.id}`)}
                     </h3>
@@ -144,6 +154,11 @@ const App: React.FC = () => {
                     className="group relative overflow-hidden bg-white/80 backdrop-blur-sm hover:bg-white border border-orange-200 hover:border-orange-400 rounded-xl p-4 text-left transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-200/50 w-52"
                   >
                     <div className="absolute top-0 left-0 w-1 h-full bg-orange-400/0 group-hover:bg-orange-500 transition-colors"></div>
+                    <div className="absolute top-3 right-3 text-orange-400 group-hover:text-orange-600 transition-colors">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                      </svg>
+                    </div>
                     <h3 className="text-base font-serif font-semibold text-orange-900 mb-1.5 group-hover:text-orange-600">
                       {t(`topic.${topic.id}`)}
                     </h3>
@@ -167,6 +182,11 @@ const App: React.FC = () => {
                     className="group relative overflow-hidden bg-white/80 backdrop-blur-sm hover:bg-white border border-orange-200 hover:border-orange-400 rounded-xl p-4 text-left transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-200/50 w-52"
                   >
                     <div className="absolute top-0 left-0 w-1 h-full bg-orange-400/0 group-hover:bg-orange-500 transition-colors"></div>
+                    <div className="absolute top-3 right-3 text-orange-400 group-hover:text-orange-600 transition-colors">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                      </svg>
+                    </div>
                     <h3 className="text-base font-serif font-semibold text-orange-900 mb-1.5 group-hover:text-orange-600">
                       {t(`topic.${topic.id}`)}
                     </h3>

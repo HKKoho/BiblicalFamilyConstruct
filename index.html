@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Soul Care - Biblical Healing</title>
+    <title>Biblical Family Construction - Building God-Honoring Families</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
@@ -13,8 +13,10 @@
       
       body {
         font-family: 'Inter', sans-serif;
-        background-color: #09090b; /* Zinc 950 */
         color: #fafafa;
+        background: transparent;
+        position: relative;
+        min-height: 100vh;
       }
       
       .font-serif {
@@ -29,6 +31,13 @@
       /* Smooth scrolling */
       html {
         scroll-behavior: smooth;
+        background-color: transparent;
+      }
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
       }
       
       /* Hide Scrollbar but allow scroll */
@@ -38,6 +47,33 @@
       .no-scrollbar {
           -ms-overflow-style: none;
           scrollbar-width: none;
+      }
+
+      /* Video Background Styles */
+      .video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+        object-fit: cover;
+      }
+
+      .video-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: linear-gradient(to bottom, rgba(9, 9, 11, 0.2), rgba(9, 9, 11, 0.4));
+        pointer-events: none;
+      }
+
+      #root {
+        position: relative;
+        z-index: 1;
       }
     </style>
   <script type="importmap">
@@ -59,7 +95,11 @@
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-ambient min-h-screen">
+  <body class="min-h-screen">
+    <video autoplay muted loop playsinline class="video-background">
+      <source src="/video/background.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
     <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
