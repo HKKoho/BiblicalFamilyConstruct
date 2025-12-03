@@ -86,9 +86,9 @@ const App: React.FC = () => {
 
           <Hero />
 
-          <div className="max-w-7xl mx-auto px-4 pb-12">
+          <div className="max-w-6xl mx-auto px-4 pb-8">
             {/* Pentagon Layout Container */}
-            <div className="relative min-h-[680px] flex items-center justify-center">
+            <div className="relative min-h-[600px] flex items-center justify-center">
               {/* Pentagon arrangement: Top (1), Row 2 (2), Row 3 (3), Row 4 (3), Bottom (2) */}
 
               {/* Top Row - 1 card (Introduction) */}
@@ -120,7 +120,7 @@ const App: React.FC = () => {
               </div>
 
               {/* Row 2 - 2 cards */}
-              <div className="absolute top-28 left-1/2 -translate-x-1/2 flex gap-4">
+              <div className="absolute top-24 left-1/2 -translate-x-1/2 flex gap-4">
                 {TOPICS.slice(1, 3).map((topic) => (
                   <button
                     key={topic.id}
@@ -148,7 +148,7 @@ const App: React.FC = () => {
               </div>
 
               {/* Row 3 - 3 cards */}
-              <div className="absolute top-[224px] left-1/2 -translate-x-1/2 flex gap-4">
+              <div className="absolute top-48 left-1/2 -translate-x-1/2 flex gap-4">
                 {TOPICS.slice(3, 6).map((topic) => (
                   <button
                     key={topic.id}
@@ -176,7 +176,7 @@ const App: React.FC = () => {
               </div>
 
               {/* Row 4 - 3 cards */}
-              <div className="absolute top-[352px] left-1/2 -translate-x-1/2 flex gap-4">
+              <div className="absolute top-72 left-1/2 -translate-x-1/2 flex gap-4">
                 {TOPICS.slice(6, 9).map((topic) => (
                   <button
                     key={topic.id}
@@ -233,7 +233,7 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          <footer className="text-center py-8 text-orange-600 text-xs">
+          <footer className="text-center py-4 text-orange-600 text-xs">
             <p>{t('ui.footer')} • {new Date().getFullYear()}</p>
           </footer>
         </div>
